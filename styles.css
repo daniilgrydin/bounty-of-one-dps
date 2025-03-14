@@ -37,7 +37,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+li,
+ol {
   margin-left: auto;
   margin-right: auto;
 }
@@ -83,7 +85,8 @@ h5 {
 }
 
 p,
-label.non-stat {
+label.non-stat,
+li {
   font-size: 1.7em;
   color: #fff5db;
   text-shadow: -1px -1px #3f0d1e, 1px -1px #3f0d1e, -1px 1px #3f0d1e,
@@ -445,4 +448,17 @@ pre code{
 pre *{
     font-family: "Courier New", Courier, monospace;
 
+}
+
+a {
+  color: #fdd037;
+  text-decoration: none;
+}
+
+.footer {
+  /* width: fill; */
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #3f0d1e90;
 }

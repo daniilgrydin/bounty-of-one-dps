@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "IFC INSANE RODEO BOLD Bold";
-  src: url("/fonts/rodeo.ttf") format("truetype");
+  src: url("fonts/rodeo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

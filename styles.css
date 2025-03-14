@@ -1,0 +1,448 @@
+* {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.content {
+  /* display: flex; */
+  width: 75%;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-image: url("other/planks.png");
+  background-repeat: repeat;
+  background-size: 40%;
+  border-radius: 16px;
+  outline: 4px solid #fdd037;
+  padding: 30px 20px;
+  margin: 40px auto;
+}
+
+.content > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: "IFC INSANE RODEO BOLD Bold";
+  src: url("/fonts/rodeo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IFC INSANE RODEO BOLD Bold", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #fff5db;
+  text-shadow: -2px -2px #3f0d1e, 2px -2px #3f0d1e, -2px 2px #3f0d1e,
+    2px 2px #3f0d1e;
+  width: fit-content;
+}
+
+h1 {
+  font-family: "Sancreek";
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #4e1602;
+  text-shadow: -2px -2px #fdd037, 2px -2px #fdd037, -2px 2px #fdd037,
+    2px 2px #fdd037;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+p,
+label.non-stat {
+  font-size: 1.7em;
+  color: #fff5db;
+  text-shadow: -1px -1px #3f0d1e, 1px -1px #3f0d1e, -1px 1px #3f0d1e,
+    1px 1px #3f0d1e;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #000;
+  background-image: url("other/banner.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.paper {
+  background-color: #fff5db;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000000;
+  height: fit-content;
+  width: 75%;
+  margin: 20px auto;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  background-color: #9f7342;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 2px solid #290418;
+  box-shadow: 0px 0px 10px 0px #000000;
+  margin: 0 auto;
+}
+.stat {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  margin-right: 30px;
+  width: calc(50% - 30px);
+  box-sizing: border-box;
+}
+.stat img {
+  width: 36px;
+  height: 36px;
+  /* margin-right: 10px; */
+}
+#upgrades_high {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #c5a981;
+  padding: 18px 24px;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 10px 0px #000000; */
+  height: fit-content;
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  width: fit-content;
+}
+.upgrade img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.upgrade img:hover {
+  scale: 1.5;
+}
+
+.bar-container {
+  width: 50vw;
+  /* min-width: ; */
+  background-color: #3f0d1e;
+  margin-left: 0px;
+  border-radius: 20px;
+}
+.bar {
+  height: 20px;
+  min-width: 20px;
+  background: linear-gradient(to right, #0b6e48 0%, #80e3bb 100%);
+  text-align: right;
+  /* padding-right: 5px; */
+  color: white;
+  border-radius: 20px;
+}
+.preset {
+  margin: 0px 5px;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.preset:hover {
+  opacity: 1;
+}
+
+.selected {
+  /* outline: yellow solid 2px; */
+}
+
+.selected .preset {
+  opacity: 1;
+  scale: 1.1;
+}
+
+#stage-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.character-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 8%;
+  min-width: 128px;
+  aspect-ratio: 1;
+  /* margin: 0px; */
+}
+
+.character-container .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  margin: 0px;
+}
+
+.selected .background {
+  opacity: 1;
+}
+
+.character-container .preset {
+  position: relative;
+  z-index: 2;
+}
+
+input[type="number"] {
+  background-color: #29041812;
+  border: none;
+  color: white;
+  width: 50%;
+  font-size: 1.5em;
+  min-width: 50px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 2px solid #4e1602;
+}
+
+input[type="number"]:focus {
+  outline: 2px solid #fdd037;
+}
+
+.stat label span, .level-stat label span {
+  display: none;
+}
+
+.stat label br,  .level-stat label br {
+  display: none;
+}
+
+.level-stat {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  margin-right: 30px;
+  width: calc(100% - 30px);
+  box-sizing: border-box;
+}
+
+.stage-range {
+  width: 50%;
+  height: 24px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 12px;
+  position: relative;
+  outline: 2px solid #3f0d1e;
+  z-index: 1; /* Lower z-index for the range track */
+  margin-left: 10px;
+}
+
+.stage-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: url("other/knob.png");
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  z-index: 10; /* Higher z-index for the thumb */
+}
+
+.stage-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: url("other/knob.png");
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  z-index: 10; /* Higher z-index for the thumb */
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 24px;
+  border-radius: 10px;
+  padding-right: 20px;
+  background: linear-gradient(to right, #0b6e48 0%, #80e3bb 100%);
+}
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  height: 24px;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(to right, #0b6e48 0%, #80e3bb 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0 10px;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  /* border: 0.15em solid currentColor; */
+  /* border-radius: 0.15em; */
+  background-image: url("other/check.png");
+  background-size: 100%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  clip-path: polygon(
+    0% 51%,
+    26% 66%,
+    44% 89%,
+    78% 23%,
+    100% 10%,
+    68% 11%,
+    49% 26%,
+    38% 46%,
+    19% 40%
+  );
+  transform: scale(0) translate(0.75em, 0.75em);
+  transform-origin: bottom left;
+  transition: 120ms transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 1em 1em #55bd40;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.stat {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.options {
+  width: 90%;
+}
+
+.options td {
+  padding: 10px;
+  text-align: left;
+  max-width: 50%;
+    /* width: 50%; */
+    /* display: inline-block; */
+    box-sizing: border-box;
+    /* margin: 0px; */
+    vertical-align: top;
+}
+
+.options td > * {
+  margin-top: 0;
+}
+
+/* td label{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+} */
+
+/* td .level-stat{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    margin-right: 30px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+} */
+
+pre code{
+    width: 75%;
+    margin: 0 auto;
+}
+
+pre *{
+    font-family: "Courier New", Courier, monospace;
+
+}

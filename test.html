@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="snazzy.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Optimize your character in Bounty of One with the DPS Upgrade Ranker. Compare stats and rank upgrades to maximize performance.">
+        <meta name="keywords" content="Bounty of One, DPS Ranker, Game Upgrades, Character Optimization, RPG Tools">
+        <meta name="author" content="Your Name or Website">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph for Social Media -->
+        <meta property="og:title" content="DPS Upgrade Ranker - Bounty of One">
+        <meta property="og:description" content="Find the best upgrades for your character in Bounty of One with this ranking tool.">
+        <meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+        <meta property="og:url" content="https://yourwebsite.com/dps-upgrade-ranker">
+        <meta property="og:type" content="website">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://yourwebsite.com/dps-upgrade-ranker">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <title>DPS Upgrade Ranker</title>
+        
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="content">
+    <h1>Bounty of One Upgrade Ranker</h1>
+    <p style="width: 75%;">
+        This tool is designed to help you determine the best upgrades for your character in the game Bounty of One. 
+        Simply input the stats of your character or choose one from the list and the tool will rank the upgrades based on that.
+    </p>
+    <h2>Characters</h2>
+    <div class="paper" style="padding-bottom: 12px;">
+        <div class="character-container" data-index="1" onclick="applyPreset(1)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p1.png" class="preset">
+        </div>
+        <div class="character-container" data-index="2" onclick="applyPreset(2)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p2.png" class="preset">
+        </div>
+        <div class="character-container" data-index="3" onclick="applyPreset(3)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p3.png" class="preset">
+        </div>
+        <div class="character-container" data-index="4" onclick="applyPreset(4)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p4.png" class="preset">
+        </div>
+        <div class="character-container" data-index="5" onclick="applyPreset(5)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p5.png" class="preset">
+        </div>
+        <div class="character-container" data-index="6" onclick="applyPreset(6)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p6.png" class="preset">
+        </div>
+        <div class="character-container" data-index="7" onclick="applyPreset(7)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p7.png" class="preset">
+        </div>
+        <div class="character-container" data-index="8" onclick="applyPreset(8)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p8.png" class="preset">
+        </div>
+        <div class="character-container" data-index="9" onclick="applyPreset(9)">
+            <img src="other/back.png" class="background">
+            <img src="characters/p9.png" class="preset">
+        </div>
+    </div>
+    <table class="options">
+        <tr>
+            <td>
+                <h2>Stats</h2>
+    <div class="stats-container">
+        <div class="stat"><img src="stats/damage.png" alt="Damage"><label><span>Damage:</span> <br/><input type="number" id="damage" value="60" step="5" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/speed.png" alt="Attack Speed"><label><span>Attack Speed:</span><br/> <input type="number" id="attack_speed" value="2.1" step="0.5" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/chance.png" alt="Crit Chance"><label><span>Critical Chance (%):</span><br/> <input type="number" id="crit_chance" value="5" step="25" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/crit.png" alt="Crit Damage"><label><span>Critical Damage (%):</span><br/> <input type="number" id="crit_damage" value="200" step="50" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/range.png" alt="Pickup Range"><label><span>Pickup Range:</span><br/> <input type="number" id="pickup_range" value="110" step="10" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/cooldown.png" alt="Cooldown"><label><span>Cooldown:</span><br/> <input type="number" id="cooldown" value="90" step="10" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/bounce.png" alt="Bounce"><label><span>Bounce:</span> <br/><input type="number" id="bounce" value="0" step="1" oninput="calculateRanking()"></label></div>
+        <div class="stat"><img src="stats/pierce.png" alt="Pierce"><label><span>Pierce:</span> <br/><input type="number" id="pierce" value="0" step="1" oninput="calculateRanking()"></label></div>
+    </div>
+            </td>
+            <td>
+                <h2>Extra</h2>
+    <div class="level-stat">
+        <img id="stage-image" src="stages/stage_1.png" alt="Stage">
+        <label for="stage" class="non-stat">Stage:</label>
+            <input class="stage-range" type="range" id="stage" min="1" max="6" value="1" step="1" oninput="updateStageImage(); calculateRanking()">
+    </div>
+    <div class="level-stat">
+        <label for="include_special" class="non-stat">Include Special:</label>
+        <input type="checkbox" id="include_special" onchange="calculateRanking()">
+    </div>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- <h2>Items</h2>
+    <div class="items-container">
+        <div class="item" data-index="1" onclick="toggleItem(1)">
+            <img src="items/1.png" alt="Item 1">
+            <label for="item1">Item 1:</label>
+            <input type="checkbox" id="item1" onchange="calculateRanking()">
+        </div>
+    </div> -->
+    
+    <h2>Ranked Upgrades</h2>
+    <div id="upgrades_high"></div>
+    <script src="stats.js"></script>
+    <script src="main.js"></script>
+    <script>window.onload = ()=>{calculateRanking();applyPreset(1);}</script>
+    <h2>How it Works</h2>
+    <p style="width: 75%;">
+        The DPS Upgrade Ranker calculates the damage per second (DPS) of your character based on the stats you provide:
+        </p>
+        <pre><code>// Convert percentages to decimals
+criticalChance /= 100;
+criticalMultiplier /= 100;
+          
+// Limit pierce and bounce based on stage level
+pierceCount = Math.min(pierceCount, stage * 2);
+bounceCount = Math.min(bounceCount, stage * 2 - pierceCount);
+criticalChance = Math.min(criticalChance, 1); // Ensure crit chance does not exceed 100%
+          
+// Calculate effective damage considering critical hits
+let effectiveDamage =
+    baseDamage + criticalChance * criticalMultiplier * baseDamage;
+          
+// Adjust damage based on enemy health thresholds
+const enemyHealth = healths[stage - 1];
+if (effectiveDamage > enemyHealth * 3) {
+    effectiveDamage = enemyHealth * 0.85 + effectiveDamage * 0.15;
+} else if (effectiveDamage > enemyHealth * 2) {
+    effectiveDamage = enemyHealth * 0.7 + effectiveDamage * 0.3;
+} else if (effectiveDamage > enemyHealth) {
+    effectiveDamage = enemyHealth * 0.5 + effectiveDamage * 0.5;
+}
+          
+// Calculate final DPS considering attack speed, pierce, and bounce effects
+return (
+    effectiveDamage *
+    attackSpeed *
+    (1 + (pierceCount * stage) / 6 + (bounceCount * stage) / 6)
+);</code></pre>
+        <p style="width: 75%;">
+        It then ranks the upgrades available in the game based on the increase in DPS they provide. 
+        The tool also takes into account the stage you are and whether you have access to the special upgrades. 
+        This allows you to make an informed decision on which upgrades to prioritize to maximize your character's performance.
+    </p>
+</div>
+<script>hljs.highlightAll();</script>
+</body>
+</html>
